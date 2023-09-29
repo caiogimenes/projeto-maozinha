@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- HTML5Shiv -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- Estilo customizado -->
+    <link rel="stylesheet" type="text/css" href="/static/estilo.css">
+
+    <title>Mãozinha</title>
+  </head>
+  <body>
+    
+    <header>
+      <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
+        <div class="container">
+
+          <a href="https://app.institutoinfnet.edu.br/wp-login.php?redirect_to=https://app.institutoinfnet.edu.br/matriculas-pos-live&bp-auth=1&action=bpnoaccess">
+            <img src= "/static/imagens/logo_infnet_hor.png" width="300">
+          </a>
+
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+            <i class="fas fa-bars text-white"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="nav-principal">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="" class="nav-link">Sobre</a>
+              </li>
+              
+              <li class="nav-item divisor"></li>
+
+              <li class="nav-item">
+                <a href="" class="nav-link">Testes</a>
+              </li>
+             
+            </ul>
+          </div>
+
+        </div>
+        
+      </nav>
+    </header>
+
+    <section id="home" class="d-flex"> 
+      <div class="container align-self-center">
+        <div class="row">
+          <div class="col-md-12 capa" style="margin-top: auto;">
+            <h1>Handy</h1>
+          </div> 
+          <div class="col-md-12 capa">
+              <video id="camera" autoplay></video>
+              <canvas id="canvas" style="display:none;"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="video" class="d-flex"> 
+      <div class="container align-self-center">
+        <div class="row">
+          <div class="col-md-12 capa">
+              <video id="camera" autoplay></video>
+              <canvas id="canvas" style="display:none;"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <script>
+      // Acessar a câmera
+      navigator.mediaDevices.getUserMedia({ video: true })
+          .then(function (stream) {
+              var video = document.getElementById('camera');
+              video.srcObject = stream;
+          })
+          .catch(function (error) {
+              console.error('Erro ao acessar a câmera:', error);
+          });
+    </script>
+
+
+
+  
+    <footer class="bg-light text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a
+            class="btn text-white btn-floating m-1"
+            style="background-color: #3b5998;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+             
+          <!-- Instagram -->
+          <a
+            class="btn text-white btn-floating m-1"
+            style="background-color: #970e61;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+    
+          <!-- Linkedin -->
+          <a href="https://www.linkedin.com/in/lucas-corr%C3%AAa-dos-reis-3a7a35233/"
+            class="btn text-white btn-floating m-1"
+            style="background-color: #0082ca;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <!-- Github -->
+          <a href="https://github.com/Lucas28reis"
+            class="btn text-white btn-floating m-1"
+            style="background-color: #333333;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Copyright:
+        <a class="text-white" href="hhttps://github.com/Lucas28reis">Lucas Reis</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
